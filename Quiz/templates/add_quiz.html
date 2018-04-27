@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block body %}
+  {% if session.logged_in %}
+    <form action="{{ url_for('add_quiz') }}" method=post >
+      <dl>
+        <dt>Subject:
+        <dd><input type=text size=30 name=subject>
+        <dt>Question Number:
+        <dd><input type=text size=30 name=questionNum>
+		<dt>Quiz Date:
+        <dd><input type=date size=30 name=quizDate>
+        <dd><input type=submit value=Save>
+      </dl>
+    </form>
+  {% endif %} 
+{% endblock %}
