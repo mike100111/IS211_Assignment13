@@ -1,1 +1,0 @@
-from .theblog import app
